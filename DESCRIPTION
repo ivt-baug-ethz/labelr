@@ -5,8 +5,15 @@ Authors@R:
     person(given = "Tino",
            family = "Good",
            role = c("aut", "cre"),
-           email = "rev(first).last@gmail.com")
+           email = "onit.good+labelr@gmail.com")
 Description: Provides labelling features to be used before plotting or printing a table.
 License: MIT
 Encoding: UTF-8
 LazyData: true
+Imports: 
+    dplyr
+RoxygenNote: 6.1.1
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
