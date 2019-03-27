@@ -8,7 +8,7 @@
 #' @export
 #' @author Tino Good, \email{onit.good@gmail.com}
 #'
-#' @importFrom dplyr %>% do group_by distinct
+#' @importFrom dplyr %>% do group_by distinct inner_join
 #'
 #' @examples
 #' label_var(x = "ERW", variable = "gef")
@@ -36,13 +36,15 @@ label_var <- function(x, variable = NULL, ...) {
       return(.data)
     }
   }
+  label_df_sub <- label_df
   if (!is.null(try_by)) {
     for (nm in try_by) {
-      label_df <- label_df %>% group_by(from) %>%
+      label_df_sub <- label_df_sub %>% group_by(from) %>%
         do(filterfun(., variable = nm, value = dots[[nm]]))
     }
   }
 
+  label_df <- inner_join(label_df, label_df_sub, by = intersect(names(label_df), names(label_df_sub)))
   label_df <- distinct(.data = label_df, from, .keep_all = TRUE)
 
   # Option, nur benutzte Labels zu brauchen? Dann könnte man auch poolen... Bzw. müsste keine Unterscheidung gemacht werden...
