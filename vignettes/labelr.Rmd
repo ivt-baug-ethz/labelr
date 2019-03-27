@@ -1,5 +1,5 @@
 ---
-title: "Short intro to `labalr`"
+title: "Short intro to `labelr`"
 author: "Tino Good"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
