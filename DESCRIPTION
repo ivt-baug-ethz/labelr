@@ -8,6 +8,8 @@ Authors@R:
            email = "onit.good+labelr@gmail.com")
 Description: Provides labelling features to be used before plotting or printing a table.
 License: MIT
+URL: https://github.com/tinino/labelr
+BugReports: https://github.com/tinino/labelr/issues
 Encoding: UTF-8
 LazyData: true
 Imports: 
