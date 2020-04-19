@@ -19,9 +19,6 @@ Vector of labels
 \description{
 Label variable values
 }
-\examples{
-label_var(x = "ERW", variable = "gef")
-}
 \author{
-Tino Good, \email{onit.good@gmail.com}
+Tino Good, \email{onit.good+labelr@gmail.com}
 }

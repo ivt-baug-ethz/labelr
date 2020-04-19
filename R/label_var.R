@@ -6,12 +6,9 @@
 #'
 #' @return Vector of labels
 #' @export
-#' @author Tino Good, \email{onit.good@gmail.com}
+#' @author Tino Good, \email{onit.good+labelr@gmail.com}
 #'
 #' @importFrom dplyr %>% do group_by distinct inner_join
-#'
-#' @examples
-#' label_var(x = "ERW", variable = "gef")
 label_var <- function(x, variable = NULL, ...) {
 
   # deparse variable name from x and search for labels in namespace:

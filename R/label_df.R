@@ -7,10 +7,7 @@
 #'
 #' @return Labelled data frame
 #' @export
-#' @author Tino Good, \email{onit.good@gmail.com}
-#'
-#' @examples
-#' label_df(df)
+#' @author Tino Good, \email{onit.good+labelr@gmail.com}
 label_df <- function(df, ...) {
   # should order df and label all relevant columns
   labels_available <- names(labelr::labels$get())

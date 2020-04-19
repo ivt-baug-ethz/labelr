@@ -9,6 +9,9 @@ new_defaults(value = list())
 \arguments{
 \item{value}{Named list of data frames with at least \code{from} and \code{to} values (columns).}
 }
+\value{
+Label-container.
+}
 \description{
 New label defaults
 }

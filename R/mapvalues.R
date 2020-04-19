@@ -9,9 +9,6 @@
 #' @param missing_to_na If \code{TRUE} (default), values that do not occur in the from-vector will be transformed to \code{NA}. If \code{FALSE}, these values will remain as given in \code{x}, hence untouched.
 #'
 #' @return Vector of length \code{x} with mapped values.
-#'
-#' @examples
-#' ggsnb::mapvalue(x = letters, from = letters, to = rev(letters)) # recode letters from a-z by reverse order, thus output is z-a
 mapvalues <- function (x, from, to, warn_missing = FALSE, missing_to_na = TRUE)
 {
   if (length(from) != length(to)) {

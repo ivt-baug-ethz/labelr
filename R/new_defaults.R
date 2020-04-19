@@ -2,12 +2,10 @@
 #'
 #' @param value Named list of data frames with at least \code{from} and \code{to} values (columns).
 #'
-#' @return
+#' @return Label-container.
 #' @export
 #'
 #' @author Yihui Xie (borrowed from knitr)
-#'
-#' @examples
 new_defaults <- function(value = list()) {
 
   defaults <- value

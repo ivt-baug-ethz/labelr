@@ -23,6 +23,3 @@ Vector of length \code{x} with mapped values.
 \description{
 Maps values of given input to another value, given the vectors \code{from} and \code{to}. This function is a modified version of \code{plyr::mapvalues}, but treats missing values more strict (by default).
 }
-\examples{
-ggsnb::mapvalue(x = letters, from = letters, to = rev(letters)) # recode letters from a-z by reverse order, thus output is z-a
-}

@@ -17,9 +17,6 @@ Labelled data frame
 \description{
 Use this to label your final data frame before you plot it.
 }
-\examples{
-label_df(df)
-}
 \author{
-Tino Good, \email{onit.good@gmail.com}
+Tino Good, \email{onit.good+labelr@gmail.com}
 }
