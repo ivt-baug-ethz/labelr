@@ -47,6 +47,10 @@ label_var <- function(x, variable = NULL, ...) {
   label_df <- inner_join(label_df, label_df_sub, by = intersect(names(label_df), names(label_df_sub)))
   label_df <- distinct(.data = label_df, from, .keep_all = TRUE)
 
+  if (all(is.na(x))) {
+    return(x)
+  }
+
   # Option, nur benutzte Labels zu brauchen? Dann könnte man auch poolen... Bzw. müsste keine Unterscheidung gemacht werden...
   if (!any(as.character(x) %in% label_df$from) & !is.factor(x)) {
     stop("No match in the `from`, hence no labels. Do you have the correct variable?")
