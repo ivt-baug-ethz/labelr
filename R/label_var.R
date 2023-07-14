@@ -50,7 +50,8 @@ label_var <- function(x, variable = NULL, ...) {
 
   # Option, nur benutzte Labels zu brauchen? Dann könnte man auch poolen... Bzw. müsste keine Unterscheidung gemacht werden...
   if (!any(as.character(x) %in% label_df$from) & !is.factor(x)) {
-    stop("No match in the `from`, hence no labels. Do you have the correct variable?")
+    msg <- paste("No match for variable", variable, "in the `from`, hence no labels. Do you have the correct variable?", sep = " ")
+    stop(msg)
   }
 
   # if not all are in labels, fill missing with initial value an put at first place, because exceptions might be most important (custom/ad-hoc stuff)
